@@ -128,7 +128,7 @@
     <h2>Login</h2>
     <input type="text" placeholder="Username" id="username">
     <input type="password" placeholder="Password" id="password">
-    <button onclick="login()">Login</button>
+    <button id="btn">Login</button>
   </div>
 
   <!-- Vanta.js background -->
@@ -146,17 +146,15 @@
       scale: 1.00,
       scaleMobile: 1.00
     });
-
-    function login() {
-      const username = document.getElementById('username').value;
-      const password = document.getElementById('password').value;
-      // Simple dummy check (replace with real validation/server later)
-      if (username === "admin" && password === "password") {
-        alert("Login successful!");
-      } else {
-        alert("Invalid credentials.");
-      }
-    }
+  </script>
+  <script>
+document.getElementById("btn").addEventListener('click', function() {
+  const username = document.getElementById("username").value;
+  const password = document.getElementById("password").value;
+// user info in the console
+console.log(username)
+console.log(password)
+});
   </script>
   <!-- FOOTER -->
   <footer>
